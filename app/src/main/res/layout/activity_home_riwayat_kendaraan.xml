@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--HEADER-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+    <!--END HEADER-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true">
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/noUjiKendaraanSearch"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAllCaps="true"
+            app:floatingSearch_close_search_on_keyboard_dismiss="false"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_dismissOnOutsideTouch="true"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_searchBarMarginLeft="8dp"
+            app:floatingSearch_searchBarMarginRight="8dp"
+            app:floatingSearch_searchHint="Masukkan no.uji / no.kendaraan"
+            app:floatingSearch_showSearchKey="true"
+            app:floatingSearch_suggestionsListAnimDuration="250" />
+    </RelativeLayout>
+
+    <!--<ScrollView-->
+        <!--android:id="@+id/ScrollView01"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:fillViewport="true"-->
+        <!--android:scrollbars="none">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_box"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorNotification"
+                    android:gravity="center"
+                    android:text="IDENTIFIKASI"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp" />
+
+                <!--NO UJI-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="No. Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtNoUji"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--NO KENDARAAN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="No Kendaraan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtNoKend"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--MERK-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Merk" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMerk"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--TIPE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tipe" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTipe"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--NO. CHASIS-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="No. Chasis" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtNoChasis"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--NO. MESIN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="No. Mesin" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtNoMesin"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    <!--</ScrollView>-->
+</LinearLayout>

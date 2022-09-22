@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/windowBackground"
+    android:orientation="vertical">
+
+    <!--HEADER-->
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+    <!--END HEADER-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true">
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/noUjiKendaraanSearch"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:floatingSearch_close_search_on_keyboard_dismiss="false"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_dismissOnOutsideTouch="true"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_searchBarMarginLeft="8dp"
+            app:floatingSearch_searchBarMarginRight="8dp"
+            app:floatingSearch_searchHint="Masukkan no.uji / no.kendaraan"
+            app:floatingSearch_showSearchKey="true"
+            app:floatingSearch_suggestionsListAnimDuration="250" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/windowBackground"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_box"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorNotification"
+                    android:gravity="center"
+                    android:text="BIAYA RETRIBUSI"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp" />
+
+                <!--NO UJI-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="No. Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtNoUji"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--NO KENDARAAN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="No. Kendaraan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtNoKend"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--TGL UJI-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTglUji"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <View
+                    style="@style/borderBottom"
+                    android:layout_width="fill_parent" />
+
+                <!--RETRIBUSI-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Retribusi" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtRetribusi"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--GANTI BUKU-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ganti Buku" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtGantiBuku"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <!--DENDA-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Denda Keterlambatan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtDenda"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <View
+                    style="@style/borderBottom"
+                    android:layout_width="fill_parent" />
+
+                <!--TOTAL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="TOTAL" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="@color/colorRed"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

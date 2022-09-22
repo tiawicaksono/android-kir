@@ -1,0 +1,743 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/idForSaving"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <TextView-->
+<!--            style="@style/text14"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="UJI COBA" />-->
+<!--    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true">
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/noUjiKendaraanSearch"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAllCaps="true"
+            app:floatingSearch_close_search_on_keyboard_dismiss="false"
+            app:floatingSearch_dimBackground="false"
+            app:floatingSearch_dismissOnOutsideTouch="true"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_searchBarMarginLeft="8dp"
+            app:floatingSearch_searchBarMarginRight="8dp"
+            app:floatingSearch_searchHint="Masukkan no.uji / no.kendaraan"
+            app:floatingSearch_showSearchKey="true"
+            app:floatingSearch_suggestionsListAnimDuration="250" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/windowBackground"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_box"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorNotification"
+                android:gravity="center"
+                android:text="IDENTIFIKASI"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <!--NO UJI-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="No. Uji" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtNoUji"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--NO KENDARAAN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="No Kendaraan" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtNoKend"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--MERK-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Merk" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtMerk"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--TIPE-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tipe" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtTipe"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--NO. CHASIS-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="No. Chasis" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtNoChasis"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--NO. MESIN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="No. Mesin" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtNoMesin"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--UPTD PKB-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tempat Uji" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtUptd"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textAllCaps="true"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--NIK PENDAFTAR-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="NIK Pemohon" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <EditText
+                    android:id="@+id/txtNikPemohon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text=""
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--NAMA PENDAFTAR-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Pemohon" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <EditText
+                    android:id="@+id/txtNamaPemohon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text=""
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!--DATEPICKER-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_datepicker"
+                    style="@style/text12"
+                    android:layout_width="144dp"
+                    android:layout_height="26dp"
+                    android:background="@android:color/holo_green_light"
+                    android:gravity="center"
+                    android:onClick="setDate"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="Pilih Tanggal Uji"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_marginLeft="5dp"
+                    android:text=":" />
+
+                <EditText
+                    android:id="@+id/tv_dateresult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:editable="false"
+                    android:text=""
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/idKendaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/tujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonDaftarNonAktif"
+                android:layout_width="387dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="DAFTAR UJI"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorPrimary" />
+
+            <Button
+                android:id="@+id/buttonDaftar"
+                android:layout_width="387dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="DAFTAR UJI"
+                android:textAlignment="center"
+                android:background="#42A5F5"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:textColor="@color/textColorPrimary" />
+
+            <View
+                style="@style/borderBottom"
+                android:layout_width="fill_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorNotification"
+                android:gravity="center"
+                android:text="KETERANGAN PEMBAYARAN"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <!--NO VA-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="Virtual Account" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="" />
+
+                <TextView
+                    style="@style/text12"
+                    android:layout_width="186dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/downloadPdf"
+                    android:layout_width="61dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:srcCompat="@mipmap/ic_pdf_download"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/downloadPdfNone"
+                    android:layout_width="61dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    app:srcCompat="@mipmap/ic_pdf_download_disable" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/downloadImage"-->
+<!--                    android:layout_width="61dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:clickable="true"-->
+<!--                    app:srcCompat="@mipmap/ic_pdf_download" />-->
+            </LinearLayout>
+
+            <!--NO VA BANK JATIM-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="false"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_bank_jatim" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtVaBankJatim"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_weight="3"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--COPY VA BANK JATIM-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/buttonCopyVa"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/holo_green_light"
+                    android:paddingLeft="10dp"
+                    android:paddingEnd="10dp"
+                    android:textAllCaps="false"
+                    android:text="Copy Virtual Account"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="* Silakan melakukan pembayaran melalui teller Bank Jatim atau transfer melalui semua Bank, sesuai VIRTUAL ACCOUNT"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/borderBottom"
+                android:layout_width="fill_parent" />
+
+
+            <!--NIK PEMOHON-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="NIK Pemohon" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtPemohonNik"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--NAMA PEMOHON-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Pemohon" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtPemohonNama"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--B.LULUS UJI-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="B. Retribusi" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtBLulusUji"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--B.TLT UJI-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="B. Telat Uji" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtBTelatUji"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--B.BUKU UJI-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="B. Buku Uji" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtBBukuUji"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <!--JML BAYAR-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total Bayar" />
+
+                <TextView
+                    style="@style/text14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/txtJmlBayar"
+                    style="@style/text12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.barteksc.pdfviewer.PDFView
+                    android:id="@+id/pdfView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

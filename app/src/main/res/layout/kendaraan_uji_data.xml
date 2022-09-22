@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/windowBackground"
+            android:fillViewport="true"
+            android:paddingBottom="50dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_box"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <!--
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorNotification"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="UPTD PKB WIYUNG SURABAYA \n KENDARAAN BERMOTOR JBB DIBAWAH 3.500 Kg"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Barang" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilBarangWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Bus" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilBusWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Penumpang" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilPenumpangWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Kendaraan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKendaraanWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/borderBottom"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Datang Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKendaraanDatangWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak Datang Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKendaraanTidakDatangWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Lulus Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalLulusWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Tidak Lulus Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalTidakLulusWiyung"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+                -->
+
+                <!--========================================================================-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorNotification"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="Dinas Perhubungan Kabupaten Jombang \n Pengujian Kendaraan Bermotor"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Barang" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilBarangTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Bus" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilBusTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Penumpang" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilPenumpangTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Khusus" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilKhususTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Gandengan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilGandenganTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mobil Tempelan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtMobilTempelanTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Kendaraan" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKendaraanTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    style="@style/borderBottom"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Datang Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKendaraanDatangTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tidak Datang Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalKendaraanTidakDatangTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Lulus Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalLulusTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total Tidak Lulus Uji" />
+
+                    <TextView
+                        style="@style/text14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/txtTotalTidakLulusTandes"
+                        style="@style/text12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

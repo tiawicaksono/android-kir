@@ -1,0 +1,14 @@
+<Tab>
+    <tab
+        id="@+id/BottomBarData"
+        activeColor="@color/colorActive"
+        icon="@drawable/ic_kend_uji_data"
+        title="Jumlah Kend.Uji"
+        titleSize="4dp"/>
+    <tab
+        id="@+id/BottomBarList"
+        activeColor="@color/colorActive"
+        icon="@drawable/ic_kend_uji_data"
+        title="List Kend.Uji"
+        titleSize="4dp"/>
+</Tab>

@@ -1,0 +1,320 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kirsurabaya.myapplication.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorNotification"
+            android:gravity="center"
+            android:text="Toward Better Urban Transportation"
+            android:textColor="@android:color/white"
+            android:textSize="12dp" />
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ScrollView01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/windowBackground"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/windowBackground"
+                android:orientation="vertical">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    custom:auto_cycle="true"
+                    custom:indicator_visibility="visible"
+                    custom:pager_animation="Accordion"
+                    custom:pager_animation_span="1100" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/llCekKendaraan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:background="@drawable/button_home_linearlayout"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/image_buttton_cek_kendaraan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_home_cek_kendaraan" />
+
+                        <TextView
+                            style="@style/fontHomeStyle"
+                            android:text="CEK DATA KENDARAAN" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llHasilUji"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:background="@drawable/button_home_linearlayout"
+                        android:layout_marginRight="5dp">
+
+                        <ImageView
+                            android:id="@+id/image_buttton_hasil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_home_hasil" />
+
+                        <TextView
+                            style="@style/fontHomeStyle"
+                            android:text="HASIL UJI" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/llKendaraanUji"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:background="@drawable/button_home_linearlayout"
+                        android:layout_marginRight="5dp">
+
+                        <ImageView
+                            android:id="@+id/image_buttton_kendaraan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_home_kendaraan" />
+
+                        <TextView
+                            style="@style/fontHomeStyle"
+                            android:text="TOTAL KENDARAAN UJI" />
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llStatusRekom"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:clickable="true"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:background="@drawable/button_home_linearlayout"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:layout_marginLeft="5dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_buttton_rekom"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:adjustViewBounds="true"-->
+<!--                            android:background="@drawable/button_home_rekom" />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/fontHomeStyle"-->
+<!--                            android:text="STATUS REKOM" />-->
+<!--                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/llRiwayatKendaraan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:padding="10dp"
+                        android:background="@drawable/button_home_linearlayout"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp">
+
+                        <ImageView
+                            android:id="@+id/image_buttton_riwayat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_home_riwayat" />
+
+                        <TextView
+                            style="@style/fontHomeStyle"
+                            android:text="RIWAYAT KENDARAAN" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/llQrCode"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:background="@drawable/button_home_linearlayout"
+                        android:layout_marginRight="5dp">
+
+                        <ImageView
+                            android:id="@+id/image_buttton_qrcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_home_qrcode" />
+
+                        <TextView
+                            style="@style/fontHomeStyle"
+                            android:text="QRCODE SMART CARD" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCekRetribusi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:clickable="true"
+                        android:background="@drawable/button_home_linearlayout"
+                        android:layout_marginRight="5dp">
+
+                        <ImageView
+                            android:id="@+id/image_buttton_cek_retribusi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/button_home_retribusi" />
+
+                        <TextView
+                            style="@style/fontHomeStyle"
+                            android:text="BIAYA UJI" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginBottom="5dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/llQrCode"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:clickable="true"-->
+<!--                        android:background="@drawable/button_home_linearlayout"-->
+<!--                        android:layout_marginRight="5dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_buttton_qrcode"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:adjustViewBounds="true"-->
+<!--                            android:background="@drawable/button_home_qrcode" />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/fontHomeStyle"-->
+<!--                            android:text="QRCODE SMART CARD" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:padding="10dp"-->
+<!--                        android:layout_marginRight="5dp">-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+    <!--android:id="@+id/custom_indicator"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--custom:selected_color="#0095BF"-->
+    <!--custom:unselected_color="#55333333"-->
+    <!--custom:selected_drawable="@drawable/bird"-->
+    <!--custom:shape="oval"-->
+    <!--custom:selected_padding_left="5dp"-->
+    <!--custom:selected_padding_right="5dp"-->
+    <!--custom:unselected_padding_left="5dp"-->
+    <!--custom:unselected_padding_right="5dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--custom:selected_width="6dp"-->
+    <!--custom:selected_height="6dp"-->
+    <!--custom:unselected_width="6dp"-->
+    <!--custom:unselected_height="6dp"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--/>-->
+    <!--<com.daimajia.slider.library.Indicators.PagerIndicator-->
+    <!--android:id="@+id/custom_indicator2"-->
+    <!--style="@style/AndroidImageSlider_Corner_Oval_Orange"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="20dp"-->
+    <!--/>-->
+    <!--<ListView-->
+    <!--android:layout_below="@+id/slider"-->
+    <!--android:id="@+id/transformers"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"></ListView>-->
+
+</RelativeLayout>

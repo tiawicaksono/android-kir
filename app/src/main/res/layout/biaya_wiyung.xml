@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:android1="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TextView
+                style="@style/text12"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="* Dasar Perda Kota Surabaya No.1 Thn. 2011" />
+
+            <TableRow
+                android:id="@+id/headerTable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#37abc8"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Jenis Pelayanan"
+                    android:textColor="#f2f2f2"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#37abc8"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Retribusi"
+                    android:textColor="#f2f2f2"
+                    android:textSize="12dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/baris1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="left"
+                    android:text="1. Pengujian Kendaraan Bermotor JBB ≤ 3500 Kg" />
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="center"
+                    android:text="Rp. 65.000,-"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorRed"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/baris2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="left"
+                    android:text="2. Penggantian Buku Uji" />
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="center"
+                    android:text="Rp. 15.000,-" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/baris3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="left"
+                    android:text="3. Rekomendasi numpang uji keluar" />
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="center"
+                    android:text=" x " />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/baris4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="left"
+                    android:text="3. Rekomendasi mutasi uji keluar" />
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="center"
+                    android:text=" x " />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/baris5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="left"
+                    android:text="3. Rekomendasi ubah sifat" />
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="center"
+                    android:text=" x " />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/baris6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="left"
+                    android:text="3. Rekomendasi laporan rusak" />
+
+                <TextView
+                    style="@style/text12"
+                    android:gravity="center"
+                    android:text=" x " />
+            </TableRow>
+
+            <LinearLayout
+                android:id="@+id/syarat_tambahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/baris6"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/syarat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Keterangan :"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/syarat1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="x = Tidak dipungut Retribusi"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/syarat2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Denda keterlambatan sebesar 2 % perbulan dari retribusi uji"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

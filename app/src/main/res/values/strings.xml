@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">KIR Pelalawan</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_fragment">HOME</string>
+    <string name="info_fragment">INFO</string>
+    <string name="profile_fragment">PROFILE</string>
+
+    <string-array name="judul_persyaratan">
+        <item>Kendaraan Baru</item>
+        <item>Uji Berkala</item>
+        <item>Mutasi Uji Masuk</item>
+        <item>Mutasi Uji Keluar</item>
+        <item>Numpang Uji Masuk</item>
+        <item>Numpang Uji Keluar</item>
+        <item>Ubah Bentuk (Modifikasi)</item>
+        <item>Ubah Sifat</item>
+    </string-array>
+
+    <string-array name="sub_judul_persyaratan">
+        <item>Persyaratan untuk pengujian baru (baru pertama kali uji)</item>
+        <item>Persyaratan untuk pengujian berkala (sudah pernah uji)</item>
+        <item>Persyaratan untuk kendaraan yang akan melakukan mutasi uji masuk</item>
+        <item>Persyaratan untuk kendaraan yang akan melakukan mutasi uji keluar</item>
+        <item>Persyaratan untuk kendaraan yang akan menumpang uji</item>
+        <item>Persyaratan untuk kendaraan yang akan menumpang uji di luar daerah</item>
+        <item>Ubah bentuk (modifikasi) kendaraan</item>
+        <item>Ubah Sifat</item>
+    </string-array>
+</resources>

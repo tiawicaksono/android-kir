@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hint_foreground_material_light">#000000</color>
+    <color name="hint_foreground_material_dark">#000000</color>
+    <color name="colorPrimary">#211F20</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#F3F3F3</color>
+    <color name="navigationBarColor">#000000</color>
+    <!--<color name="colorActive">#91DC5A</color>-->
+    <color name="colorActive">#42A5F5</color>
+    <color name="colorFont">#221E1F</color>
+    <color name="colorBorder">#E6E6E6</color>
+    <color name="colorNotification">#FF5656</color>
+    <color name="colorRed">#FF0000</color>
+</resources>

@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <FrameLayout
+        android:id="@+id/contentContainerPad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBarPad"
+        android:background="@color/black"/>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBarPad"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        app:bb_inActiveTabColor="@color/textColorPrimary"
+        app:bb_tabXmlResource="@xml/bottombar_tabs" />
+</RelativeLayout>

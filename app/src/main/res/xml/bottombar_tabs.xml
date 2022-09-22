@@ -1,0 +1,14 @@
+<Tab>
+    <tab
+        id="@+id/BottomBarWiyung"
+        icon="@drawable/ic_car_wiyung"
+        activeColor="@color/colorActive"
+        title="Wiyung"
+        titleSize="4dp"/>
+    <tab
+        id="@+id/BottomBarTandes"
+        icon="@drawable/ic_car_tandes"
+        activeColor="@color/colorActive"
+        title="Tandes"
+        titleSize="4dp"/>
+</Tab>
